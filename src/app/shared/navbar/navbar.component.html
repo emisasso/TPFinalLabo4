@@ -1,0 +1,33 @@
+<nav  *ngIf="!userLoged" class="noLogin">
+
+        <ul class="login-reg">
+            <li><a class="hiperVinculo" (click)="goToLogin()">Login</a></li>
+            <li><a class="hiperVinculo" (click)="goToRegister()">Register</a></li>
+        </ul>
+    
+        <ul class="logo-titulo">
+            <li>
+                <img src="../../../assets/movie-club-logo.png" alt="Logotipo de Mi Aplicación">
+            </li>
+            <li>
+                <h1>Movie<br>Club</h1>
+            </li>
+        </ul>
+</nav>
+
+<nav *ngIf="userLoged" class="Login">
+        <ul class="login-reg">
+            <li><a href="http://localhost:4200/user/favorites">Favoritos</a></li>
+            <li><a class="hiperVinculo" (click)="logout()">Logout</a></li>
+            <li><a class="hiperVinculo" (click)="goToUserPage()">Bienvenido {{userLoged.userName}}</a></li>
+        </ul>
+    <ul class="logo-titulo">
+        <li>
+            <img src="../../../assets/movie-club-logo.png" alt="Logotipo de Mi Aplicación">
+        </li>
+        <li>
+            <h1>Movie<br>Club</h1>
+        </li>
+    </ul>
+</nav>
+

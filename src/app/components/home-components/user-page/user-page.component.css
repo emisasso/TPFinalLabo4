@@ -1,0 +1,91 @@
+.userData {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #3498db;
+  }
+
+  .opUserName,
+  .otherDates {
+    list-style: none;
+    padding: 0;
+  }
+
+  .opUserName li,
+  .otherDates li {
+    margin-bottom: 10px;
+  }
+
+  .buttonCangeUserName,
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .buttonCangeUserName:hover,
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  button {
+    background-color: #e74c3c;
+    margin-left: 8px;
+  }
+
+  button:hover {
+    background-color: #c0392b;
+  }
+
+  .userDataLabel {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .changeButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .changeButton:hover {
+    background-color: #2980b9;
+  }
+  
+  .container {
+    margin: 60px 0 0 0;
+    background-image: url('../../../../assets/columbus-1936633_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  .changePassword input{
+    margin-left: 10px;
+  }
+
+  .changeUserName input{
+    margin-left: 10px;
+  }

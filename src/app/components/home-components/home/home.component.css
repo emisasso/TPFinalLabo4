@@ -1,0 +1,148 @@
+.movie-card {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+  }
+  
+  .movie-poster img {
+    width: 150px;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .movie-details {
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .overview {
+    color: #666;
+  }
+  
+  strong {
+    color: #000;
+  }
+  
+  /* Para añadir un efecto al pasar el ratón por encima */
+  .movie-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    /* Otros estilos según tu diseño */
+  }
+  h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+  .button:hover {
+    background-color: #2e86de;
+  }
+
+  .button-selected {
+    background-color:  #022b55;
+    color: #fff;
+  }
+  .genre-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .genre-buttons button{
+    margin-top: 10px;
+  }
+
+.container {
+    margin-top: 90px;
+    background-image: url(../../../../assets/popcorn.jpg);
+    background-repeat: repeat;
+}
+
+.star {
+  font-size: 3em;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Efecto de transición al hacer clic */
+  text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.favorite {
+  color: gold;
+}
+
+.agregarFav{
+  display: flex;
+}
+
+.textFav{
+  margin-right: 20px;
+  margin-top: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+
+.primera-pagina{
+  background-color: #1b0000;
+}
+
+.busqueda{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.inputSearch {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+.searchButton {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #45a049;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

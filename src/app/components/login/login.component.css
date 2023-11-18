@@ -1,0 +1,79 @@
+.login-container {
+  margin: 0;
+  background-image: url(../../../assets/movie-theater.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+form {
+  width: 300px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 140px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+form button{
+  margin-left: 8px;
+}

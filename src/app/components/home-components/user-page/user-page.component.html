@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class = "container">
+    <div class="userData" *ngFor="let user of userLoged">
+        <p class="title">Datos Personales</p>
+        <ul class="opUserName">
+            <li>
+                <p><span class="userDataLabel">Nombre de Usuario:</span> {{user.userName}}</p>
+                <button class="changeButton" (click)="wantChangeUserrName()">Cambiar</button>
+            </li>
+            <li *ngIf="changeUserName" class="changeUserName">
+                <input [(ngModel)]="newUserName" type="text" placeholder="Nuevo nombre de usuario... ">
+                <button (click)="onSubmitNewUserName()"> Confirmar</button>
+            </li>
+        </ul>
+        <ul class="otherDates">
+            <li>
+                <p><span class="userDataLabel">Correo Electrónico:</span> {{user.email}}</p>
+                <button class="changeButton" (click)="wantChangePassword()">Cambiar Contraseña</button>
+            </li>
+            <li *ngIf="changePassword" class="changePassword">
+                <input [(ngModel)]="validationPassword" type="password" placeholder="Vieja contraseña... ">
+                <input [(ngModel)]="newPassword" type="password" placeholder="Nueva contraseña... ">
+                <button (click)="onSubmitNewPassword()">Confirmar</button>
+            </li>
+        </ul>
+        <button class="favoritesButton" (click)="navigateToFavorites()">FAVORITOS</button>
+        <button class="deleteAccountButton" (click)="wantDeleteAccount()">Eliminar cuenta!</button>
+        <ul>
+            <li *ngIf="deleteAccount" class="deleteAccount">
+                <p>¿Esta seguro de que quiere eliminar su cuenta?</p>
+                <input [(ngModel)]="validationToDelete" type="password" placeholder="Ingrese su contraseña para confirmar... ">
+                <button (click)="onSubmitDeleteAccount()">Confirmar</button>
+            </li>
+        </ul>
+        <button (click)="buttonBackUserToHome()">Atras</button>
+    </div>
+</div>
+<app-footer></app-footer>

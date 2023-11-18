@@ -1,0 +1,26 @@
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Teko', sans-serif;
+}
+
+@font-face {
+    font-family: 'Cinerama';
+    src: url('./assets/fonts/Cinerama.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Cinematicenglish';
+    src: url('./assets/fonts/cinematicenglish.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Film Premieres';
+    src: url('./assets/fonts/FilmPremieres.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

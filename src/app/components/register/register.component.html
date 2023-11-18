@@ -1,0 +1,21 @@
+<div class="register-body">
+  <div class="register-container">
+    <h2>Registrate</h2>
+    <form (ngSubmit)="onSubmitConValidacion()">
+      <div class="form-group">
+        <label for="userName">Username:</label>
+        <input type="userName" id="userName" name="userName" [(ngModel)]="registro.userName" required>
+      </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" [(ngModel)]="registro.email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" [(ngModel)]="registro.password" required>
+        </div>
+        <button type="submit">Registrar</button>
+    </form>
+    <button (click)="backToLanding()">Atras</button>
+  </div>
+</div>
