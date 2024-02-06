@@ -21,6 +21,7 @@ export class HomeComponentComponent implements OnInit{
   array: number[] = [];
   arrayActualizado: number[] = [];
 
+  public titleToSearchHomePrevious = '';
   public titleToSearchHome = '';
   isSearching: boolean = false;
 
@@ -62,8 +63,10 @@ getMoviesxGenre(pagina: number, genero: string): void{
 }
 
 nextPage(): void {
-  this.numberPage = this.numberPage + 1;
-  this.loadMovies();
+  if(this.movies.length > 19){
+    this.numberPage = this.numberPage + 1;
+    this.loadMovies();
+  }
 }
 
 PreviousPage(): void {
@@ -105,13 +108,19 @@ searchByTitleButton(){
 }
 
 getMoviesXTittle(numberPage: number, tittle: string){
+  if(this.titleToSearchHome != this.titleToSearchHomePrevious){
+    this.numberPage = 1;
+    this.titleToSearchHomePrevious = tittle;
+  }
+
   if(parseInt(this.idGenre) != 100){
-  this.idGenre = "100";
-  this.numberPage = 1;
-  numberPage = this.numberPage;
-}
- this.titleToSearchHome = tittle;
-this.apiService.getMoviesByName(numberPage, this.titleToSearchHome).subscribe(res => {  //BUSCA POR NOMBRE
+    this.idGenre = "100";
+    this.numberPage = 1;
+    ///numberPage = this.numberPage;
+  }
+
+  this.titleToSearchHome = tittle;
+  this.apiService.getMoviesByName(this.numberPage, this.titleToSearchHome).subscribe(res => {  //BUSCA POR NOMBRE
   this.movies = res});
 }
 

@@ -92,7 +92,7 @@ export class FavoritesPageComponent implements OnInit{
   }
 
   buttonBackFavToUser(): void{
-    this.router.navigate(['/user'])
+    this.router.navigate(['/home'])
   }
 
   noFavoritesValidation(){

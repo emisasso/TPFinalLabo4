@@ -72,6 +72,8 @@ button {
     margin: 0 10px;
 }
 
-.ups{
-    margin-top: 100px;
+.nofavoritos{
+    margin-left: 20px;
+    margin-top: 110px;
+    font-size: 8em;
 }
