@@ -1,21 +1,39 @@
 <div class="register-body">
   <div class="register-container">
-    <h2>Registrate</h2>
-    <form (ngSubmit)="onSubmitConValidacion()">
+    <h2>Regístrate</h2>
+
+    <form autocomplete="off" [formGroup]="registrationForm" (ngSubmit)="onSubmitConValidacion()">
       <div class="form-group">
-        <label for="userName">Username:</label>
-        <input type="userName" id="userName" name="userName" [(ngModel)]="registro.userName" required>
+        <label for="userName">Usuario:</label>
+        <input type="text" formControlName="userName" placeholder="Ingresa tu nombre de usuario" />
+        <span *ngIf="isValidField('userName')" class="error-message">
+          {{ getFieldError('userName') }}
+        </span>
       </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" [(ngModel)]="registro.email" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Contraseña:</label>
-          <input type="password" id="password" name="password" [(ngModel)]="registro.password" required>
-        </div>
-        <button type="submit">Registrar</button>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="text" formControlName="email" placeholder="Ingresa tu email" />
+        <span *ngIf="isValidField('email')" class="error-message">
+          {{ getFieldError('email') }}
+        </span>
+        <span *ngIf="registrationForm.get('email')?.hasError('pattern') && registrationForm.get('email')?.touched"
+          class="error-message">
+          Formato de email inválido.
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" formControlName="password" placeholder="Ingresa tu contraseña" />
+        <span *ngIf="isValidField('password')" class="error-message">
+          {{ getFieldError('password') }}
+        </span>
+      </div>
+
+      <button type="submit" class="registerButton" [disabled]="registrationForm.invalid" >Registrar</button>
     </form>
-    <button (click)="backToLanding()">Atras</button>
-  </div>
+
+    <button type="button" (click)="backToLanding()" class="login-button">Atrás</button>
+  </div>
 </div>

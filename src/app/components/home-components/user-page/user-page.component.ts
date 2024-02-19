@@ -97,7 +97,7 @@ export class UserPageComponent implements OnInit {
   validationPassword: string = '';
   newPassword: string = '';
   onSubmitNewPassword(){
-    if(this.validationPassword == this.userLoged[0].password){
+    if(this.validationPassword == this.userLoged[0].password && this.newPassword.length > 5){
       this.changePassword = false;
       this.apiService.updatePassword(this.userLogedIdNumber, this.newPassword);
       this.validationPassword = '';
@@ -106,7 +106,11 @@ export class UserPageComponent implements OnInit {
       this.ngOnInit();
     }else{
       this.changePassword = false;
-      alert("Contraseña incorrecta");
+      if(this.newPassword.length <= 5){
+        alert("La contraseña nueva tiene que tener 6 o mas caracteres")
+      }else{
+        alert("Contraseña incorrecta");
+      }
       this.validationPassword = '';
       this.newPassword = '';
       this.ngOnInit();
